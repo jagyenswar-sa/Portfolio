@@ -601,6 +601,15 @@ body {
   color: var(--secondary-light);
 }
 
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
 .active-badge {
   position: absolute;
   bottom: 6px;
