@@ -282,13 +282,13 @@ body {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style: none;
 }
 
@@ -1206,6 +1206,136 @@ body {
 }
 
 /* --------------------------------------------------------
+   7B. PROJECTS SECTION
+   -------------------------------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.project-link-btn:hover {
+  background: var(--grad-primary);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-top: 0.25rem;
+}
+
+.project-subtitle {
+  font-size: 0.9rem;
+  color: var(--secondary-light);
+  font-weight: 500;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.project-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.project-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.clubs-subsection {
+  margin-top: 3.5rem;
+}
+
+.subsection-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.75rem;
+}
+
+/* --------------------------------------------------------
    8. ACHIEVEMENTS SECTION
    -------------------------------------------------------- */
 .achievements-grid {
@@ -1948,6 +2078,13 @@ body {
   }
 
   .tool-tags-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid,
+  .clubs-grid,
+  .experience-grid,
+  .achievements-grid {
     grid-template-columns: 1fr;
   }
 
