@@ -321,6 +321,33 @@ body {
   color: var(--secondary-light);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all var(--transition-fast);
+}
+
+.nav-resume-link:hover {
+  border-color: var(--secondary-light);
+  color: var(--secondary-light);
+  background: rgba(6, 182, 212, 0.08);
+}
+
 /* Hide checkbox and burger on desktop */
 .menu-checkbox {
   display: none;
@@ -1289,6 +1316,101 @@ body {
   transform: translateY(-2px);
 }
 
+.project-link-btn--primary {
+  background: var(--grad-primary);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+}
+
+.project-link-btn--primary:hover {
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+.project-shot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  background: rgba(10, 13, 20, 0.65);
+}
+
+.project-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-shot-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 1.25rem;
+  text-align: center;
+  border: 1px dashed rgba(129, 140, 248, 0.35);
+  border-radius: var(--radius-md);
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.14), rgba(6, 182, 212, 0.06) 55%, rgba(10, 13, 20, 0.85));
+}
+
+.project-shot-placeholder i {
+  font-size: 1.65rem;
+  color: var(--secondary-light);
+}
+
+.project-shot-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.project-shot-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+
+.project-learned {
+  padding: 0.75rem 0.95rem;
+  background: rgba(99, 102, 241, 0.08);
+  border-left: 3px solid var(--secondary-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+.project-learned strong {
+  color: var(--secondary-light);
+}
+
+.beyond-code-bar {
+  margin-top: 2.25rem;
+  padding: 1rem 1.35rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+}
+
+.beyond-code-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+}
+
 .project-title {
   font-size: 1.3rem;
   font-weight: 700;
@@ -1528,64 +1650,37 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Skill Progress Rows */
-.skill-list {
+/* Skill Tag Chips */
+.skill-chips {
   display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
-.skill-row {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.88rem;
-}
-
-.skill-name {
-  color: var(--text-main);
-  font-weight: 500;
+.skill-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
 }
 
-.skill-pct {
-  color: var(--text-dim);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.82rem;
-  font-weight: 600;
+.skill-chip:hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+  color: var(--text-white);
 }
 
-.progress-bar-bg {
-  width: 100%;
-  height: 7px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-  position: relative;
+.skill-chip i {
+  font-size: 1rem;
 }
-
-.progress-bar-fill {
-  height: 100%;
-  background: var(--grad-primary);
-  border-radius: var(--radius-full);
-  transition: width 1s ease-in-out;
-}
-
-.w-90 { width: 90%; }
-.w-85 { width: 85%; }
-.w-80 { width: 80%; }
-.w-75 { width: 75%; }
-.w-70 { width: 70%; }
-.w-65 { width: 65%; }
-.w-60 { width: 60%; }
 
 /* Tool Tags Grid */
 .tool-tags-grid {
@@ -1923,6 +2018,74 @@ body {
    12. RESPONSIVE MEDIA QUERIES (MOBILE & TABLET ADAPTATION)
    -------------------------------------------------------- */
 @media (max-width: 992px) {
+  /* Mobile Navigation Hamburger via Pure CSS */
+  .menu-burger {
+    display: block;
+    z-index: 1001;
+  }
+
+  .menu-checkbox:checked + .menu-burger .open-icon {
+    display: none;
+  }
+
+  .menu-checkbox:checked + .menu-burger .close-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: rgba(10, 13, 20, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .menu-checkbox:checked ~ .nav-menu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.4rem;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  .nav-actions {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .nav-actions .btn,
+  .nav-actions .nav-resume-link {
+    width: 100%;
+    justify-content: center;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1967,71 +2130,6 @@ body {
 @media (max-width: 768px) {
   .section {
     padding: 4.5rem 0;
-  }
-
-  /* Mobile Navigation Hamburger via Pure CSS */
-  .menu-burger {
-    display: block;
-    z-index: 1001;
-  }
-
-  .menu-checkbox:checked + .menu-burger .open-icon {
-    display: none;
-  }
-
-  .menu-checkbox:checked + .menu-burger .close-icon {
-    display: block;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    background: rgba(10, 13, 20, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-light);
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
-    transform: translateY(-150%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform var(--transition-base), opacity var(--transition-base);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .menu-checkbox:checked ~ .nav-menu {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  .nav-item {
-    width: 100%;
-  }
-
-  .nav-link {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-  }
-
-  .nav-actions {
-    width: 100%;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-light);
-  }
-
-  .nav-actions .btn {
-    width: 100%;
   }
 
   /* Personal Info Grid */

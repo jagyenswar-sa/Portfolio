@@ -999,18 +999,6 @@
                 </div>
               </a>
 
-              <!-- Phone & WhatsApp Card -->
-              <a href="tel:+919876543210" class="channel-card">
-                <div class="channel-icon icon-emerald">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="channel-body">
-                  <span class="channel-label">Phone &amp; WhatsApp</span>
-                  <strong class="channel-value">+91 98765 43210</strong>
-                  <span class="channel-action"><i class="fa-brands fa-whatsapp"></i> Call / WhatsApp &rarr;</span>
-                </div>
-              </a>
-
               <!-- LinkedIn Card -->
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-card">
                 <div class="channel-icon icon-blue">
