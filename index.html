@@ -88,6 +88,11 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="#sai-open-source" class="nav-link">
+              <i class="fa-solid fa-code-branch nav-ico"></i> S&amp;AI Open Source
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="#experience" class="nav-link">
               <i class="fa-solid fa-laptop-code nav-ico"></i> Experience
             </a>
@@ -110,7 +115,6 @@
         </ul>
 
         <div class="nav-actions">
-          <!-- TODO: Drop résumé PDF at /assets/Jagyenswar_Sa_Resume.pdf -->
           <a href="/assets/Jagyenswar_Sa_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="nav-resume-link">
             <i class="fa-solid fa-file-arrow-down"></i> R&eacute;sum&eacute;
           </a>
@@ -171,7 +175,6 @@
             <a href="#contact" class="btn btn-primary">
               <i class="fa-solid fa-envelope"></i> Get In Touch
             </a>
-            <!-- TODO: Drop résumé PDF at /assets/Jagyenswar_Sa_Resume.pdf -->
             <a href="/assets/Jagyenswar_Sa_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <i class="fa-solid fa-file-arrow-down"></i> Download R&eacute;sum&eacute;
             </a>
@@ -267,10 +270,7 @@
               <i class="fa-solid fa-compass text-indigo"></i> Driven by curiosity, sharpened by code.
             </h3>
             <p>
-              I&rsquo;m Jagyenswar Sa (Sonu), a first-year B.Tech Computer Science student at <strong>Newton School of Technology, Pune</strong>. I enjoy building clean browser-based AI tools and grounding them in solid computer science fundamentals.
-            </p>
-            <p>
-              Originally from Jharsuguda, Odisha, I completed my schooling at PM SHRI Jawahar Navodaya Vidyalaya. Beyond coursework, I solve problems on Codeforces in C++, contribute to open source, and play BGMI competitively with Vortex on campus.
+              I&rsquo;m Jagyenswar Sa (Sonu), a first-year B.Tech Computer Science student at <strong>Newton School of Technology, Pune</strong>, originally from Jharsuguda, Odisha. I build browser-based AI developer tools, practice algorithms in C++ on Codeforces, contribute to open source, and am currently seeking Software Development Engineer (SDE) internships.
             </p>
 
             <!-- Detailed Personal Info Grid -->
@@ -444,7 +444,7 @@
             <div class="timeline-content">
               <div class="timeline-header">
                 <span class="timeline-badge">
-                  <i class="fa-solid fa-calendar-days"></i> Senior Secondary (CBSE)
+                  <i class="fa-solid fa-calendar-days"></i> Senior Secondary (CBSE) &bull; 13 May 2025
                 </span>
                 <span class="timeline-grade">
                   <i class="fa-solid fa-star text-amber"></i> Score: 86.5% (Distinction)
@@ -486,7 +486,7 @@
             <div class="timeline-content">
               <div class="timeline-header">
                 <span class="timeline-badge">
-                  <i class="fa-solid fa-calendar-days"></i> Secondary School (CBSE)
+                  <i class="fa-solid fa-calendar-days"></i> Secondary School (CBSE) &bull; 12 May 2023
                 </span>
                 <span class="timeline-grade">
                   <i class="fa-solid fa-medal text-amber"></i> Score: 93.0% (High Merit)
@@ -543,13 +543,20 @@
               </div>
             </div>
 
-            <!-- TODO: Add screenshot at /assets/projects/llm-playground.png and replace this placeholder with:
-                 <img src="/assets/projects/llm-playground.png" alt="LLM Playground interface showing streaming Groq output, temperature sliders, and latency metrics" /> -->
-            <div class="project-shot">
-              <div class="project-shot-placeholder" role="img" aria-label="Screenshot placeholder for LLM Playground interface showing streaming output, parameter controls, and latency HUD">
-                <i class="fa-solid fa-display"></i>
-                <span class="project-shot-label">LLM Playground Preview</span>
-                <span class="project-shot-hint">TODO: /assets/projects/llm-playground.png</span>
+            <div class="project-preview" aria-label="LLM Playground visual preview card">
+              <div class="preview-chrome">
+                <span class="preview-dots"><span></span><span></span><span></span></span>
+                <span>llm-playground-inky.vercel.app</span>
+              </div>
+              <div class="preview-body">
+                <div class="preview-metrics">
+                  <span class="preview-pill preview-pill--orange">Temp 0.0&ndash;2.0</span>
+                  <span class="preview-pill">Few-Shot Indicator</span>
+                  <span class="preview-pill preview-pill--cyan">TTFT &amp; tok/s HUD</span>
+                </div>
+                <div class="preview-snippet">
+                  SSE Stream &rarr; &lt;think&gt; Reasoning Trace + Marked.js Output &bull; AbortController Ready
+                </div>
               </div>
             </div>
 
@@ -558,27 +565,33 @@
                 <i class="fa-solid fa-wand-magic-sparkles"></i> AI &amp; Prompt Engineering
               </span>
               <h3 class="project-title">LLM Playground (Groq LPU Inference)</h3>
-              <p class="project-subtitle">Single-file HTML/CSS/JS app &bull; Tailwind CSS, Marked.js &amp; Highlight.js via CDN</p>
             </div>
 
-            <p class="project-desc">
-              A fast, single-file prompt engineering workspace built around Groq LPU inference with real-time streaming, reasoning traces, and latency benchmarking.
-            </p>
-
-            <ul class="project-highlights">
-              <li>
-                <i class="fa-solid fa-circle-check bullet-icon"></i>
-                <span>Controls for Temperature (0.00&ndash;2.00), Top-P, and Max Tokens alongside dynamic Zero/One/Few-shot prompt indicators and templates.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check bullet-icon"></i>
-                <span>Streams DeepSeek R1 reasoning blocks, cited web search results, live throughput (tok/s) and TTFT (ms), plus Python, cURL, and JS code export.</span>
-              </li>
-            </ul>
-
-            <p class="project-learned">
-              <strong>What I learned:</strong> Buffering partial Server-Sent Events chunks from <code>ReadableStream</code> while separating <code>&lt;think&gt;</code> reasoning tokens from live Markdown output taught me how streaming UIs handle backpressure and cancellation.
-            </p>
+            <div class="project-rubric">
+              <div class="rubric-block">
+                <span class="rubric-label">Problem Statement</span>
+                <p class="rubric-text">Prompt engineers and students lack a fast, setup-free workspace to test temperature, Top-P, few-shot templates, and live streaming reasoning models side by side without switching tools.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Solution Architecture</span>
+                <p class="rubric-text">Single-file client-side web app dispatching streaming requests via <code>fetch</code> and <code>ReadableStream</code>, buffering partial SSE chunks to separate <code>&lt;think&gt;</code> reasoning traces from Markdown answers while computing live TTFT and tok/s metrics.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Tech Stack</span>
+                <p class="rubric-text">HTML5, Vanilla JavaScript, Tailwind CSS (CDN), Marked.js, Highlight.js, Groq API.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Individual Contribution</span>
+                <p class="rubric-text">Sole developer &mdash; designed and implemented the streaming SSE parser, few-shot shot counter, performance HUD, and code-export UI end-to-end.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Repository &amp; Live Demo Links</span>
+                <div class="rubric-links-note">
+                  <a href="https://llm-playground-inky.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                  <a href="https://github.com/jagyenswar-sa/llm-playground" target="_blank" rel="noopener noreferrer">GitHub Repository &rarr;</a>
+                </div>
+              </div>
+            </div>
 
             <div class="exp-tech-stack">
               <span class="stack-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
@@ -604,13 +617,20 @@
               </div>
             </div>
 
-            <!-- TODO: Add screenshot at /assets/projects/tokeniser.png and replace this placeholder with:
-                 <img src="/assets/projects/tokeniser.png" alt="LLM Token Explorer interface displaying color-coded BPE tokens, vocabulary merges, and 3D embedding clusters" /> -->
-            <div class="project-shot">
-              <div class="project-shot-placeholder" role="img" aria-label="Screenshot placeholder for LLM Token Explorer showing color-coded BPE tokens, vocabulary merge table, and 3D embedding clusters">
-                <i class="fa-solid fa-cubes"></i>
-                <span class="project-shot-label">LLM Token Explorer Preview</span>
-                <span class="project-shot-hint">TODO: /assets/projects/tokeniser.png</span>
+            <div class="project-preview" aria-label="LLM Token Explorer visual preview card">
+              <div class="preview-chrome">
+                <span class="preview-dots"><span></span><span></span><span></span></span>
+                <span>tokeniser-simulation.vercel.app</span>
+              </div>
+              <div class="preview-body">
+                <div class="preview-metrics">
+                  <span class="preview-pill preview-pill--cyan">BPE Merge Trainer</span>
+                  <span class="preview-pill">6 Model Tokenizers</span>
+                  <span class="preview-pill preview-pill--orange">3D Vector Space</span>
+                </div>
+                <div class="preview-snippet">
+                  [&ldquo;Token&rdquo;, &ldquo;iser&rdquo;] &rarr; UTF-8 Bytes &bull; 3D Canvas Orbit &bull; Logits Temperature / Top-P
+                </div>
               </div>
             </div>
 
@@ -619,33 +639,254 @@
                 <i class="fa-solid fa-puzzle-piece"></i> NLP &amp; Visualization
               </span>
               <h3 class="project-title">LLM Token Explorer (Tokeniser v2.5)</h3>
-              <p class="project-subtitle">Client-side HTML/CSS/JS suite &bull; Tailwind CSS via CDN, no build step</p>
             </div>
 
-            <p class="project-desc">
-              A client-side suite for inspecting subword tokenization, training Byte-Pair Encoding vocabularies step by step, and exploring 3D token embeddings.
-            </p>
-
-            <ul class="project-highlights">
-              <li>
-                <i class="fa-solid fa-circle-check bullet-icon"></i>
-                <span>Live tokenization across Flow, Chips, Table, and Raw IDs views with a UTF-8 byte/hex inspector and side-by-side GPT-4o, Llama 3, Claude 3.5, and Gemma 2 comparisons.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check bullet-icon"></i>
-                <span>Interactive BPE Vocabulary Builder, 3D Canvas embedding visualizer with custom token placement, Logits Sampling Simulator, and Inference Cost Estimator.</span>
-              </li>
-            </ul>
-
-            <p class="project-learned">
-              <strong>What I learned:</strong> Projecting 3D token coordinates onto a 2D HTML5 Canvas with rotation matrices, depth-sorted hit testing, and live BPE pair-frequency merging taught me how subword vocabularies and embedding geometry behave under the hood.
-            </p>
+            <div class="project-rubric">
+              <div class="rubric-block">
+                <span class="rubric-label">Problem Statement</span>
+                <p class="rubric-text">Developers learning LLMs often treat tokenization, subword BPE merges, and vector embeddings as black boxes, making token costs and character-splitting errors hard to intuit.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Solution Architecture</span>
+                <p class="rubric-text">Client-side modular JS suite combining multi-model subword segmentation, an interactive BPE vocabulary merge simulator, a 2D HTML5 Canvas 3D-projection embedding explorer with depth-sorted hit testing, and a logits sampling simulator.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Tech Stack</span>
+                <p class="rubric-text">HTML5, CSS3, Vanilla JavaScript, Tailwind CSS (CDN), HTML5 Canvas 3D projection.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Individual Contribution</span>
+                <p class="rubric-text">Sole developer &mdash; engineered the tokenization engine, BPE merge loop, 3D embedding visualizer, logits sampler, and responsive interface.</p>
+              </div>
+              <div class="rubric-block">
+                <span class="rubric-label">Repository &amp; Live Demo Links</span>
+                <div class="rubric-links-note">
+                  <a href="https://tokeniser-simulation.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                  <a href="https://github.com/jagyenswar-sa/Tokeniser" target="_blank" rel="noopener noreferrer">GitHub Repository &rarr;</a>
+                </div>
+              </div>
+            </div>
 
             <div class="exp-tech-stack">
               <span class="stack-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
               <span class="stack-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
               <span class="stack-badge"><i class="fa-solid fa-wind"></i> Tailwind CSS (CDN)</span>
               <span class="stack-badge"><i class="fa-solid fa-cube"></i> 3D Canvas</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         S&AI OPEN-SOURCE CONTRIBUTIONS SECTION
+         10 Sequential Pull Requests (R10-T021 to R10-T030)
+         ======================================================== -->
+    <section class="section opensource-section" id="sai-open-source">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">
+            <i class="fa-solid fa-code-branch"></i> S&amp;AI Project Portfolio
+          </div>
+          <h2 class="section-title">S&amp;AI Open-Source <span class="gradient-text">Contributions</span></h2>
+          <p class="section-subtitle">
+            Ten deterministic validation, metadata verification, and catalogue maintenance pull requests opened for <code>S-AI-Projects/free-programming-books</code>.
+          </p>
+        </div>
+
+        <div class="repo-banner">
+          <div class="repo-banner-info">
+            <div class="achieve-badge badge-emerald">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div>
+              <h3 class="repo-banner-title">Target Repository: <a href="https://github.com/S-AI-Projects/free-programming-books" target="_blank" rel="noopener noreferrer" style="color: var(--accent-emerald); text-decoration: none;">S-AI-Projects/free-programming-books</a></h3>
+              <p class="repo-banner-sub">Tasks R10-T021 through R10-T030 &bull; Pull Requests #88&ndash;#97 (Opened November 2026)</p>
+            </div>
+          </div>
+          <a href="https://github.com/S-AI-Projects/free-programming-books/pulls?q=is%3Apr+author%3Ajagyenswar-sa" target="_blank" rel="noopener noreferrer" class="pr-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View All 10 PRs on GitHub
+          </a>
+        </div>
+
+        <div class="pr-grid">
+          <!-- PR 1: R10-T021 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T021</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/88" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #88
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t021.py</code>, offline fixtures, documentation, and generated run evidence under <code>work/R10-T021/</code> for <code>casts/free-podcasts-screencasts-pt_BR.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Ensures reproducible extraction of display names, URLs (including fragments), heading hierarchy, and source line numbers while excluding fenced code blocks and keeping live checks non-destructive.
+            </div>
+          </article>
+
+          <!-- PR 2: R10-T022 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T022</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/89" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #89
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t022.py</code>, offline redirect/timeout fixtures, <code>r10-t022-README.md</code>, and evidence under <code>work/R10-T022/</code> for <code>books/free-programming-books-vi.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Safely verifies redirect chains (200, 301-to-200) and catches redirect loops or timeouts with bounded requests without removing valid entries on transient network errors.
+            </div>
+          </article>
+
+          <!-- PR 3: R10-T023 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T023</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/90" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #90
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t023.py</code>, URL normalization/duplicate fixtures, <code>README-r10-t023.md</code>, and evidence under <code>work/R10-T023/</code> for <code>books/free-programming-books-cs.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Flags exact and normalized duplicate URL groups for manual review while preserving meaningful query parameters, paths, schemes, and fragments to prevent false-positive deletions.
+            </div>
+          </article>
+
+          <!-- PR 4: R10-T024 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T024</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/91" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #91
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t024.py</code>, category/heading fixtures, <code>README-r10-t024.md</code>, and evidence in <code>work/R10-T024/</code>; moved <em>Les Cast Codeurs Podcast</em> from <code>Java</code> to <code>Langage Agnostique</code> in <code>casts/free-podcasts-screencasts-fr.md</code> and removed the empty <code>Java</code> section/index entry.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Enforces accurate subject categorization based on verified episode coverage rather than keyword matching alone, and prevents duplicate or orphaned category headings.
+            </div>
+          </article>
+
+          <!-- PR 5: R10-T025 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T025</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/92" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #92
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t025.py</code>, missing-field fixtures, <code>README-r10-t025.md</code>, and evidence under <code>work/R10-T025/</code> for <code>courses/free-courses-mr.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Cross-validates catalogue titles, authors, source lines, and provider identity against YouTube/oEmbed metadata to catch missing required fields deterministically.
+            </div>
+          </article>
+
+          <!-- PR 6: R10-T026 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T026</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/93" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #93
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t026.py</code>, offline malformed/unusual-URL/fenced-code fixtures, <code>README-r10-t026.md</code>, and evidence under <code>work/R10-T026/</code> for <code>casts/free-podcasts-screencasts-my.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Decouples syntax and schema validation from network availability so CI self-tests run deterministically offline without failing on external rate limits.
+            </div>
+          </article>
+
+          <!-- PR 7: R10-T027 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T027</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/94" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #94
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t027.py</code>, HTTP/network failure fixtures (including HEAD-405 to GET-200 fallback), <code>README-r10-t027.md</code>, and evidence under <code>work/R10-T027/</code> for <code>casts/free-podcasts-screencasts-fa_IR.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Distinguishes HTTP 403, 404, 429, DNS failures, and timeouts&mdash;with automatic GET fallback when HEAD is unsupported&mdash;so transient errors are never misclassified as dead links.
+            </div>
+          </article>
+
+          <!-- PR 8: R10-T028 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T028</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/95" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #95
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t028.py</code>, Cyrillic/Russian <code>&euml;</code> sorting and malformed-bullet fixtures, <code>README-r10-t028.md</code>, and evidence under <code>work/R10-T028/</code> for <code>more/free-programming-playgrounds-ru.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Validates Markdown bullet syntax, heading hierarchy, and locale-aware Cyrillic alphabetical sorting with exact source-line diagnostics.
+            </div>
+          </article>
+
+          <!-- PR 9: R10-T029 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T029</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/96" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #96
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t029.py</code>, access-requirement fixtures (public, auth, payment, Cloudflare 403/404), <code>README-r10-t029.md</code>, and evidence under <code>work/R10-T029/</code> for <code>courses/free-courses-ro.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Separates unverified/bot-blocked automated checks from confirmed access barriers so courses behind security challenges are not falsely removed.
+            </div>
+          </article>
+
+          <!-- PR 10: R10-T030 -->
+          <article class="pr-card">
+            <div class="pr-card-head">
+              <span class="pr-task-badge">R10-T030</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/97" target="_blank" rel="noopener noreferrer" class="pr-link">
+                <i class="fa-solid fa-code-pull-request"></i> PR #97
+              </a>
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Code Modifications</span>
+              Added <code>tools/course_checks/r10-t030.py</code>, state-comparison fixtures, <code>README-r10-t030.md</code>, and evidence under <code>work/R10-T030/</code> for <code>courses/free-courses-no.md</code>.
+            </div>
+            <div class="pr-detail">
+              <span class="pr-detail-label">Technical Rationale</span>
+              Produces a deterministic maintenance audit separating observed source facts and before/after metadata diffs from manual editorial recommendations.
             </div>
           </article>
         </div>
@@ -815,20 +1056,20 @@
         </div>
 
         <div class="achievements-grid">
-          <!-- Achievement 1: JNVST Selection -->
+          <!-- Achievement 1: free-programming-books -->
           <div class="achievement-card">
-            <div class="achieve-badge badge-emerald">
-              <i class="fa-solid fa-medal"></i>
+            <div class="achieve-badge badge-cyan">
+              <i class="fa-solid fa-code-branch"></i>
             </div>
             <div class="achieve-content">
-              <span class="achieve-tag tag-emerald"><i class="fa-solid fa-circle-check"></i> JNVST Merit</span>
-              <h3 class="achieve-title">Selected for PM SHRI JNV Jharsuguda</h3>
+              <span class="achieve-tag tag-cyan"><i class="fa-brands fa-github"></i> Open Source</span>
+              <h3 class="achieve-title">Contributed to free-programming-books (10 PRs, #88&ndash;#97)</h3>
               <p class="achieve-desc">
-                Selected for Jawahar Navodaya Vidyalaya, Jharsuguda through the nationwide Jawahar Navodaya Vidyalaya Selection Test (JNVST).
+                Completed the 10-task open-source engineering assignment for <a href="https://github.com/S-AI-Projects/free-programming-books/pulls?q=is%3Apr+author%3Ajagyenswar-sa" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-light);">S-AI-Projects/free-programming-books</a>, opening pull requests #88&ndash;#97 for validation and maintenance checks.
               </p>
               <div class="achieve-meta">
-                <span><i class="fa-solid fa-school"></i> Navodaya Vidyalaya Samiti</span>
-                <span><i class="fa-solid fa-location-dot"></i> Odisha</span>
+                <span><i class="fa-solid fa-calendar-days"></i> November 18, 2026</span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/S-AI-Projects/free-programming-books/pulls?q=is%3Apr+author%3Ajagyenswar-sa" target="_blank" rel="noopener noreferrer" style="color: inherit;">Verify Pull Requests</a></span>
               </div>
             </div>
           </div>
@@ -845,26 +1086,8 @@
                 Reached <span data-cf-solved-short>~200</span> solved algorithmic problems in C++ on <a href="https://codeforces.com/profile/Sonu_1202" data-cf-profile-link target="_blank" rel="noopener noreferrer" style="color: var(--primary-light);">Codeforces (@<span data-cf-handle>Sonu_1202</span>)</a>. <span data-cf-rating-note>Rated contests: starting soon</span>.
               </p>
               <div class="achieve-meta">
-                <span><i class="fa-solid fa-terminal"></i> C++</span>
+                <span><i class="fa-solid fa-calendar-days"></i> November 2026</span>
                 <span><i class="fa-solid fa-link"></i> <a href="https://codeforces.com/profile/Sonu_1202" data-cf-profile-link target="_blank" rel="noopener noreferrer" style="color: inherit;">codeforces.com/profile/Sonu_1202</a></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Achievement 3: free-programming-books -->
-          <div class="achievement-card">
-            <div class="achieve-badge badge-cyan">
-              <i class="fa-solid fa-code-branch"></i>
-            </div>
-            <div class="achieve-content">
-              <span class="achieve-tag tag-cyan"><i class="fa-brands fa-github"></i> Open Source</span>
-              <h3 class="achieve-title">Contributed to free-programming-books</h3>
-              <p class="achieve-desc">
-                Completed the 10-task open-source assignment for <a href="https://github.com/S-AI-Projects/free-programming-books/pulls?q=is%3Apr+author%3Ajagyenswar-sa" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-light);">S-AI-Projects/free-programming-books</a>, opening pull requests #88&ndash;#97 for validation and maintenance checks.
-              </p>
-              <div class="achieve-meta">
-                <span><i class="fa-solid fa-calendar-days"></i> 2026</span>
-                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/S-AI-Projects/free-programming-books/pulls?q=is%3Apr+author%3Ajagyenswar-sa" target="_blank" rel="noopener noreferrer" style="color: inherit;">View Pull Requests</a></span>
               </div>
             </div>
           </div>
@@ -903,9 +1126,9 @@
             </div>
 
             <div class="skill-chips">
-              <span class="skill-chip"><i class="fa-solid fa-terminal text-cyan"></i> C++</span>
-              <span class="skill-chip"><i class="fa-solid fa-c text-purple"></i> C</span>
-              <span class="skill-chip"><i class="fa-brands fa-python text-yellow"></i> Python</span>
+              <a href="https://codeforces.com/profile/Sonu_1202" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View C++ problem solving on Codeforces"><i class="fa-solid fa-terminal text-cyan"></i> C++ <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://codeforces.com/profile/Sonu_1202" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View C / algorithmic practice on Codeforces"><i class="fa-solid fa-c text-purple"></i> C <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/88" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View Python checks in S&amp;AI PR #88"><i class="fa-brands fa-python text-yellow"></i> Python <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
               <span class="skill-chip"><i class="fa-solid fa-database text-amber"></i> MySQL</span>
             </div>
           </div>
@@ -923,12 +1146,12 @@
             </div>
 
             <div class="skill-chips">
-              <span class="skill-chip"><i class="fa-solid fa-diagram-project text-indigo"></i> Data Structures</span>
-              <span class="skill-chip"><i class="fa-solid fa-gears text-cyan"></i> Algorithms</span>
+              <a href="https://codeforces.com/profile/Sonu_1202" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View Data Structures practice on Codeforces"><i class="fa-solid fa-diagram-project text-indigo"></i> Data Structures <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://codeforces.com/profile/Sonu_1202" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View Algorithms practice on Codeforces"><i class="fa-solid fa-gears text-cyan"></i> Algorithms <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
               <span class="skill-chip"><i class="fa-solid fa-microchip text-emerald"></i> Computer Systems</span>
               <span class="skill-chip"><i class="fa-solid fa-network-wired text-amber"></i> Computer Networks</span>
               <span class="skill-chip"><i class="fa-solid fa-database text-blue"></i> Relational Databases</span>
-              <span class="skill-chip"><i class="fa-solid fa-chart-line text-purple"></i> Competitive Programming</span>
+              <a href="https://codeforces.com/profile/Sonu_1202" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View Competitive Programming profile on Codeforces"><i class="fa-solid fa-chart-line text-purple"></i> Competitive Programming <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
             </div>
           </div>
 
@@ -946,10 +1169,10 @@
 
             <div class="skill-chips">
               <span class="skill-chip"><i class="fa-brands fa-linux text-yellow"></i> Linux CLI</span>
-              <span class="skill-chip"><i class="fa-brands fa-git-alt text-red"></i> Git</span>
-              <span class="skill-chip"><i class="fa-brands fa-github text-white"></i> GitHub</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/91" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View Git workflow in S&amp;AI PR #91"><i class="fa-brands fa-git-alt text-red"></i> Git <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/97" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View GitHub PRs #88-#97"><i class="fa-brands fa-github text-white"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
               <span class="skill-chip"><i class="fa-solid fa-laptop-code text-blue"></i> VS Code</span>
-              <span class="skill-chip"><i class="fa-solid fa-terminal text-cyan"></i> Bash / Shell</span>
+              <a href="https://github.com/S-AI-Projects/free-programming-books/pull/93" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View CLI validation work in S&amp;AI PR #93"><i class="fa-solid fa-terminal text-cyan"></i> Bash / Shell <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
               <span class="skill-chip"><i class="fa-solid fa-gears text-purple"></i> GCC / G++</span>
             </div>
           </div>
@@ -967,10 +1190,10 @@
             </div>
 
             <div class="skill-chips">
-              <span class="skill-chip"><i class="fa-brands fa-html5 text-orange"></i> HTML5</span>
-              <span class="skill-chip"><i class="fa-brands fa-css3-alt text-blue"></i> CSS3</span>
-              <span class="skill-chip"><i class="fa-brands fa-js text-yellow"></i> JavaScript</span>
-              <span class="skill-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> Responsive Design</span>
+              <a href="https://github.com/jagyenswar-sa/llm-playground" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View HTML5 implementation in LLM Playground"><i class="fa-brands fa-html5 text-orange"></i> HTML5 <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://github.com/jagyenswar-sa/Tokeniser" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View CSS3 styling in LLM Token Explorer"><i class="fa-brands fa-css3-alt text-blue"></i> CSS3 <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://github.com/jagyenswar-sa/Tokeniser" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View JavaScript engine in LLM Token Explorer"><i class="fa-brands fa-js text-yellow"></i> JavaScript <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
+              <a href="https://github.com/jagyenswar-sa/llm-playground" target="_blank" rel="noopener noreferrer" class="skill-chip skill-chip--linked" title="View responsive layout in LLM Playground"><i class="fa-solid fa-mobile-screen text-emerald"></i> Responsive Design <i class="fa-solid fa-arrow-up-right-from-square skill-chip-ext"></i></a>
             </div>
           </div>
         </div>
@@ -1053,7 +1276,6 @@
               </a>
 
               <!-- Résumé Card -->
-              <!-- TODO: Drop résumé PDF at /assets/Jagyenswar_Sa_Resume.pdf -->
               <a href="/assets/Jagyenswar_Sa_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="channel-card">
                 <div class="channel-icon icon-emerald">
                   <i class="fa-solid fa-file-arrow-down"></i>
@@ -1165,6 +1387,7 @@
             <li><a href="#about"><i class="fa-solid fa-user"></i> About Me</a></li>
             <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
             <li><a href="#projects"><i class="fa-solid fa-folder-open"></i> Projects</a></li>
+            <li><a href="#sai-open-source"><i class="fa-solid fa-code-branch"></i> S&amp;AI Open Source</a></li>
             <li><a href="#experience"><i class="fa-solid fa-laptop-code"></i> Experience &amp; Clubs</a></li>
             <li><a href="#achievements"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
             <li><a href="#skills"><i class="fa-solid fa-gears"></i> Skills</a></li>
