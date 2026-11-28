@@ -1,90 +1,60 @@
-# 🎓 Student Developer Portfolio
+# Jagyenswar Sa (Sonu) — Student Developer Portfolio
 
-A modern, responsive, and interactive personal portfolio website designed specifically for a **first-year Computer Science undergraduate and beginner developer**.
+Personal portfolio for **Jagyenswar Sa (Sonu)**, a 1st-year B.Tech Computer Science (AI & ML) undergraduate at **Newton School of Technology (ADYPU), Pune**, deployed on Vercel at https://portfolio-js-dun.vercel.app/.
 
-Built with **pure HTML5 and CSS3** (no JavaScript dependencies or frameworks required).
+Built with **HTML5, CSS3, and vanilla JavaScript** (no frameworks, no build step).
 
 ---
 
 ## 📁 File Structure
 
 ```text
-/Users/sonu/nst/AI/
-├── portfolio.html   # Primary HTML portfolio document (complete structure)
-├── portfolio.tml    # Identical copy as specified in requirements
-├── styles.css       # Full stylesheet (responsive, dark theme, animations)
-└── README.md        # Guide & documentation for easy personalization
+/Users/sonu/nst/Antigravity IDE/Portfolio/
+├── index.html                    # Primary entry point served on Vercel
+├── portfolio.html                # Identical portfolio HTML document
+├── portfolio.tml                 # Exact mirror copy of portfolio.html
+├── styles.css                    # Full dark-theme responsive stylesheet
+├── assets/
+│   ├── profile.jpg               # Profile portrait
+│   └── Jagyenswar_Sa_Resume.pdf  # Downloadable résumé PDF
+└── README.md                     # Documentation & local preview instructions
 ```
 
 ---
 
-## ✨ Features & Included Sections
+## ✨ Included Sections
 
-1. **Header & Navigation Bar**:
-   - Sticky navbar with frosted glassmorphism effect (`backdrop-filter: blur`).
-   - Quick navigation links with dedicated Font Awesome icons.
-   - Pure CSS mobile hamburger drawer (no JavaScript needed).
-
-2. **Hero Section (Introduction & Overview)**:
-   - Live availability status indicator ("🟢 Open to Projects & Internships").
-   - Catchy headline, title, bio, and quick metadata pills.
-   - Interactive profile card with animated glowing ring, stats counters, and floating tech pills.
-   - Direct call-to-action buttons ("Get In Touch", "Explore Portfolio").
-
-3. **Personal Details & About Me**:
-   - First-year student story and technical aspirations.
-   - Quick facts grid (Name, Level, Languages, Location, Email Status, Availability).
-   - 4 focus highlight cards (Web Craftsmanship, DSA, Teamwork, AI Curiosity).
-
-4. **Education Journey**:
-   - Interactive vertical timeline with glowing institution markers.
-   - University / Undergraduate degree with CGPA and foundational coursework chips.
-   - Higher Secondary (12th) & Secondary (10th) school credentials with percentages and honors.
-
-5. **Work Experience & Leadership**:
-   - Tailored specifically for freshmen (Student Tech Society Trainee, Club Coordinator, Hacktoberfest Contributor).
-   - Key responsibilities, impact metrics, and tech stack tags.
-
-6. **Achievements & Certifications**:
-   - 6 recognition cards featuring icons for hackathon finalists, certifications (freeCodeCamp, Python), competitive programming streaks (100+ LeetCode problems), and academic scholarships.
-
-7. **Skills & Proficiencies**:
-   - Categorized cards:
-     - Frontend & Web Design (with animated progress bars)
-     - Programming Languages (Python, C, C++, SQL)
-     - Developer Tools & Workflow (Git, GitHub, VS Code, Linux, Figma, DevTools)
-     - Core Fundamentals & Soft Skills
-
-8. **Communication & Contact Details**:
-   - Direct contact channel cards (Email, Phone/WhatsApp, LinkedIn, GitHub, Location).
-   - Interactive styled contact message form.
-
-9. **Footer**:
-   - Clean branding, quick links, and a smooth "Back to Top" button.
+1. **Navigation & Hero (`#hero`)**:
+   - Availability status (`Open to SDE Internships & Open-Source Collaborations`), title, bio, résumé download CTA, profile card, and social links (GitHub, LinkedIn, Codeforces, Email).
+2. **About Me (`#about`)**:
+   - Summary of background (Jharsuguda, Odisha → Newton School of Technology, Pune), browser AI tooling, Codeforces practice, open-source contributions, and SDE internship focus.
+   - Quick Facts grid and 4 focus highlight cards.
+3. **Education (`#education`)**:
+   - **B.Tech in Computer Science (AI & ML)** — Newton School of Technology (ADYPU), Pune (`2026 – 2030`, 1st Year Ongoing).
+   - **Senior Secondary (Class XII, CBSE)** — PM SHRI Jawahar Navodaya Vidyalaya, Jharsuguda (`13 May 2025`, `86.5%`).
+   - **Secondary (Class X, CBSE)** — PM SHRI Jawahar Navodaya Vidyalaya, Jharsuguda (`12 May 2023`, `93.0%`).
+4. **Projects (`#projects`)**:
+   - **LLM Playground (Groq LPU Inference)** — Live Demo (`https://llm-playground-inky.vercel.app`) & Repo (`https://github.com/jagyenswar-sa/llm-playground`).
+   - **LLM Token Explorer (Tokeniser v2.5)** — Live Demo (`https://tokeniser-simulation.vercel.app`) & Repo (`https://github.com/jagyenswar-sa/Tokeniser`).
+   - Structured with Problem Statement, Solution Architecture, Tech Stack, Individual Contribution, and Links.
+5. **S&AI Open-Source Contributions (`#sai-contributions`)**:
+   - Dedicated section for [`S-AI-Projects/free-programming-books`](https://github.com/S-AI-Projects/free-programming-books) listing all 10 sequential pull requests (`R10-T021` / PR `#88` through `R10-T030` / PR `#97`) with clickable PR links, code modifications, and technical rationales.
+6. **Experience & Clubs (`#experience`)**:
+   - Competitive Programming (`@Sonu_1202`, `~200 problems solved`), Open Source summary, Competitive Programming Club (NST Pune), and `Beyond code: Vortex (NST Pune BGMI esports) · entry fragger, secondary IGL`.
+7. **Key Achievements (`#achievements`)**:
+   - Dated, externally verifiable milestones for the 10 `free-programming-books` PRs (`November 18, 2026`) and `~200` Codeforces problems (`November 2026`).
+8. **Skills & Toolkit (`#skills`)**:
+   - Grouped into **Languages**, **Core CS**, **Developer Tools**, and **Web & Frontend**, where every skill badge links directly to supporting code, PRs, or Codeforces proof.
+9. **Contact (`#contact`)**:
+   - Direct links for Email (`jagyenswarsa5086@gmail.com`), GitHub, LinkedIn, Codeforces, Résumé PDF, and a `mailto:`-based message form.
 
 ---
 
-## 🚀 How to View Your Portfolio
+## 🚀 How to View Locally
 
-### Option 1: Direct File Opening
-Double-click `portfolio.html` in your file manager (Finder) or right-click and select **Open With > Google Chrome / Safari / Edge / Firefox**.
-
-### Option 2: Live Server via Terminal
-From your terminal, run:
 ```bash
-cd /Users/sonu/nst/AI
+cd "/Users/sonu/nst/Antigravity IDE/Portfolio"
 python3 -m http.server 3000
 ```
-Then visit `http://localhost:3000/portfolio.html` in your browser.
 
----
-
-## ✏️ How to Customize Your Details
-
-Open `portfolio.html` in any text editor (VS Code, Sublime, etc.):
-
-- **Name & Title**: Search for `Sonu` or `Hi, I'm` and replace with your name.
-- **Email & Phone**: Search for `sonu.cs28@example.com` or `+91 98765 43210` to replace with your contact information.
-- **Social Handles**: Update the `href` values inside the `<a class="social-link" ...>` and `channel-card` tags with your actual LinkedIn and GitHub URLs.
-- **Education & Grades**: Update the institution name, graduation year, and GPA in the `<section id="education">` block.
-- **Icons**: Icons are powered by [Font Awesome 6](https://fontawesome.com/icons). You can swap any icon class (e.g. `fa-solid fa-trophy`) with another icon anytime!
+Then open `http://localhost:3000/index.html` or `http://localhost:3000/portfolio.html` in your browser.
